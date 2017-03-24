@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script>
+
+/*(function(){
+	
+	var a = 10;
+	
+	function $(){
+		alert(a);
+	}
+	
+	window.$ = $;
+	
+})();
+
+//alert(a);
+
+$();
+
+//$() jQuery();*/
+
+
+
+
+
+
+
+$('#div1').css();
+$('#div1').html();
+
+var arr = new Array();
+arr.push();
+arr.sort();
+
+
+
+
+
+
+
+
+$().css();
+$().html();
+
+$.trim();
+$.proxy();
+
+
+
+
+
+$('ul li + p input.class').css();
+
+
+
+
+
+
+function fn1(){ alert(1) }
+function fn2(){ alert(2) }
+
+var cb = $.Callbacks();
+
+cb.add(fn1);
+cb.add(fn2);
+
+cb.fire();  //1 ,2
+
+cb.remove(fn2);
+
+cb.fire();  //1
+
+
+
+
+
+
+
+
+
+
+
+/*setTimeout(function(){
+	alert(1);
+},1000);
+
+alert(2);*/
+
+
+var dfd = $.Deferred();
+
+setTimeout(function(){
+	alert(1);
+	dfd.resolve();
+},1000);
+
+dfd.done(function(){
+	alert(2);
+});
+
+
+
+
+
+
+
+
+$('#div1').data('name' , 'hello');
+
+$('#div1').data('name');  //hello
+
+
+
+
+
+
+
+
+
+$('#div1').animate({left : 100});
+$('#div1').animate({top : 100});
+$('#div1').animate({width : 300});
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+//$(function(){
+	
+	/*$('#div1').on('click',function(){
+		alert(1);
+		$('#div1').off('click');
+	});*/
+	/*$('#div1').on('click',function(){
+		alert(2);
+	});*/
+	//$('#div1').trigger('click');
+	
+	/*$('#span1').on('hide',function(){
+		alert(3);
+	});
+	$('#span1').on('hide',function(){
+		alert(4);
+	});
+	
+	$('#span1').trigger('hide');*/
+	
+//});
+
+window.onload = function(){
+	var oDiv = document.getElementById('div1');
+	var oSpan = document.getElementById('span1');
+	
+	var aaa = function(){
+		alert(1);
+	};
+	var bbb = function(){
+		alert(2);
+	};
+	var ccc = function(){
+		alert(3);
+	};
+	
+	//add(oDiv,'click',aaa);
+	//remove(oDiv,'click',aaa);
+	
+	add(oSpan,'show',aaa);
+	add(oSpan,'show',bbb);
+	add(oSpan,'hide',ccc);
+	
+	remove(oSpan,'hide');
+	
+	trigger(oSpan,'hide');  //
+	
+};
+
+function add(obj,types,fn){
+	
+	obj.listeners = obj.listeners || {};
+	obj.listeners[types] = obj.listeners[types] || [];
+	obj.listeners[types].push(fn);
+	
+	obj.addEventListener(types,fn,false);
+}
+function remove(obj,types,fn){
+	obj.removeEventListener(types,fn,false);
+	delete obj.listeners[types];
+}
+function trigger(obj,types){
+	var arr = obj.listeners[types] || [];
+	for(var i=0;i<arr.length;i++){
+		arr[i]();
+	}
+}
+
+</script>
+</head>
+
+<body>
+<div id="div1">div</div>
+<span id="span1">span</span>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ display:none;}
+</style>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+
+$(function(){
+
+	//$('#div1').hide();  display -> none
+	//$('#div1').show();  display -> block
+	
+	//$('#div1').toggle(false);  -> hide()
+	
+	//$('#div1').hide();  -> jQuery.css() -> getComputedStyle().display table -> data
+	//$('#div1').show();  ->  elem.nodeName -> 'div'  ->  createElement('div'); -> jQuery.css()
+	
+});
+
+$(window).load(function(){
+	
+	var div = $('iframe').get(0).contentWindow.document.getElementById('div1');
+	//console.log(window.getComputedStyle(div,null).display);
+	
+	$(div).show();
+	$('iframe').show();
+	
+});
+
+</script>
+</head>
+
+<body>
+<!--<div id="div1">aaaaaaaaaaaa</div>-->
+<iframe src="53jq.html" style="display:none"></iframe>
+</body>
+</html>

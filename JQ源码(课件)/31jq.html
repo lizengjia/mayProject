@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:100px; height:100px; background:red; position:absolute;}
+</style>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+$(function(){
+
+	/*$('#div1').click(function(){
+		
+		$(this).animate({width : 300},2000);     setInterval
+		$(this).animate({height : 300},2000);    setInterval
+		$(this).animate({left : 300},2000);      setInterval
+		
+	});*/
+	
+	$('#div1').click(function(){
+		
+		/*$(this).animate({width : 300},2000).queue(function(next){
+			
+			$(this).css('height',300);
+			next();
+			
+		}).animate({left : 300},2000);  */ 
+		
+		/*$(this).animate({width : 300},2000,function(){
+			
+			//$(this).css('height',300);
+			var This = this;
+			var timer = setInterval(function(){
+				This.style.height = This.offsetHeight + 1 + 'px';
+				if( This.offsetHeight == 200 ){
+					clearInterval(timer);
+				}
+			},30);
+			
+			
+		}).animate({left : 300},2000);*/    
+		
+		
+		/*$(this).animate({width : 300},2000).queue(function(next){
+			
+			var This = this;
+			var timer = setInterval(function(){
+				This.style.height = This.offsetHeight + 1 + 'px';
+				if( This.offsetHeight == 200 ){
+					next();
+					clearInterval(timer);
+				}
+			},30);
+			
+			
+		}).animate({left : 300},2000); */
+		
+		
+	});
+	
+	
+	/*function aaa(){
+		alert(1);
+	}
+	
+	function bbb(){
+		alert(2);
+	}
+	
+	$.queue( document , 'q1' , aaa ); 
+	$.queue( document , 'q1' , bbb );
+	
+	//console.log(   $.queue( document , 'q1')  );
+	
+	$.dequeue( document , 'q1' );*/
+	
+	
+	function aaa(){
+		alert(1);
+	}
+	
+	function bbb(){
+		alert(2);
+	}
+	
+	$(document).queue('q1',aaa);
+	$(document).queue('q1',bbb);
+	
+	$(document).queue('q1');
+	
+	//$(document).dequeue('q1');
+	//$(document).dequeue('q1');
+	
+});
+
+
+</script>
+</head>
+
+<body>
+<div id="div1"></div>
+</body>
+</html>

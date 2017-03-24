@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+/*rootjQuery : $(document)
+
+$(document).find('ul li.box');   //find -> sizzle
+
+$('ul',document).find('li');  else : jQuery(document).find();
+$('ul',$(document)).find('li'); if : jQuery(document).find();
+
+
+
+
+$(function(){});
+
+$(document).ready(function(){});
+
+
+
+$('#div1')  <-  $( $('#div1') )*/
+
+
+$(function(){
+	
+	var aDiv = document.getElementsByTagName('div');
+	
+	//$.makeArray()
+	
+	console.log( $.makeArray(aDiv,{length:0}) );
+	
+});
+
+</script>
+</head>
+
+<body>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

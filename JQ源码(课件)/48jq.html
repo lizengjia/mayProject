@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+$(function(){
+	
+	//$('input').prop('checked',true);
+	//$('input').clone().appendTo( 'body' );
+	
+	//$('div').clone().appendTo('body');
+	
+	//$('span').get(0).innerHTML = '<script>alert(1)<\/script>';
+	//$('span').html('<script>alert(1)<\/script>');
+	
+	//$('span').get(0).innerHTML = '<tr></tr>';
+	//$('span').html('<tr></tr>');
+	
+	//$('span').html('<div/>');
+	
+	//$('span').append( oDiv );
+	//$('span').append( $('div') );
+	//$('span').append( '<div></div>' );
+	
+	
+	//$('div').prepend( $('span') );
+	//<div><span></span>div</div>
+	
+	/*
+	var tr = document.createElement('tr');
+	tbody
+	table.appendChild(tr);*/
+	
+	/*$('span').append(function(){
+		return 'hello';
+	});
+	
+	$('span').append('<h1>hello</h1>');*/
+	
+	//$('span').append( $('div') );
+	
+	//$('span').append('<h1>hello</h1><p>p</p>');
+	
+	//jQuery.buildFragment() -> '<h1>hello</h1><p>p</p>'  ->  oFrag对象 : <h1>hello</h1><p>p</p>
+	
+	//$('span').append('<script>alert(123)<\/script>');
+	
+	//$('span').append('<script src="a.js"><\/script>');
+	
+	/*$('span').append( oDiv );
+	$('span').append( $('div') );
+	
+	$('span').append( 'hello' );
+	
+	$('span').append( '<h1>hello</h1><h1>hello</h1><h1>hello</h1>' );*/
+	
+	$('span').replaceWith( $('div') );
+	
+});
+
+</script>
+</head>
+
+<body>
+<!--<input type="checkbox">
+<div><script>alert(1)</script></div>
+-->
+<!--<span><div>div</div></span>
+<span><div>div</div></span>
+<span><div>div</div></span>-->
+<!--<script type="true">
+alert(123);
+</script>-->
+<span>span1<span>span2</span></span>
+<div>div</div>
+</body>
+</html>

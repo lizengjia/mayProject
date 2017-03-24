@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+/*var bBtn = true;
+
+function aaa(){
+	alert(1);
+	
+	if(bBtn){
+		cb.fire();
+		bBtn = false;
+	}
+	
+}
+
+function bbb(){
+	alert(2);
+}
+
+var cb = $.Callbacks();
+
+cb.add( aaa );
+cb.add( bbb );
+
+cb.fire();*/
+
+/*function aaa(){
+	alert(1);
+}
+
+function bbb(){
+	alert(2);
+}
+
+
+var cb = $.Callbacks('once memory');
+
+cb.add( aaa );
+
+cb.fire();
+
+cb.add( bbb );
+
+cb.fire();*/
+
+
+function aaa(){
+	alert(1);
+}
+
+function bbb(){
+	alert(2);
+}
+
+
+var cb = $.Callbacks('memory');
+
+cb.add( aaa );
+
+cb.fire();
+
+cb.lock();
+
+cb.add( bbb );
+
+cb.fire();
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

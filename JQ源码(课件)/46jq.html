@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+$(function(){
+	
+	//$('p').parentsUntil('body').css('border','1px red solid');
+
+	//$('span').siblings().css('background','red');
+	
+	//$('body').children().css('background','red');
+	
+	//console.log( $('body').children() );
+	//console.log( $('body').contents() );
+	
+	console.log( $('iframe').contents().body.style.background = 'red' );
+	
+});
+
+</script>
+</head>
+
+<body>
+<!--<div>div
+	<span>span
+    	<p>p</p>
+    </span>
+</div>-->
+
+<div>div</div>
+<span>span</span>
+<p>p</p>
+<h1>h1</h1>
+<iframe src="a.html"></iframe>
+</body>
+</html>

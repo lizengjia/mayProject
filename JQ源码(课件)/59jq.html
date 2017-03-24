@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:100px; height:30px; background:red; }
+#div2{ width:100px; height:30px; background:red; margin-top:20px;}
+#div3{ width:100px; height:30px; background:red; margin-top:20px;}
+</style>
+<script src="jquery-2.0.3.js"></script>
+<script>
+$(function(){
+	
+	
+	$('input').click(function(){
+		
+		$('#div1').animate({width : 500} , 2000 , 'linear');
+		$('#div2').animate({width : 500} , 2000 , 'swing');
+		$('#div3').animate({width : 500} , 2000 , 'miaov');
+		
+	});
+	
+});
+
+</script>
+</head>
+
+<body>
+<input type="button" value="点击">
+<div id="div1"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+</body>
+</html>

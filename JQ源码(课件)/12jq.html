@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+/*function show(){
+}
+
+alert( $.isFunction([]) );*/
+
+
+//alert( typeof alert );
+
+//alert( isFunction(alert) );
+
+
+/*function isFunction(fn){ 
+       
+		if( !fn )
+			return false;
+		var s   = "toString",
+			v   = "valueOf",
+			t   = typeof fn[s] === "function" && fn[s],
+			o   = typeof fn[v] === "function" && fn[v],
+			r;
+		if( t )
+			delete fn[s];
+		if( o )
+			delete fn[v];
+		r   = typeof fn !== "string" && !(fn instanceof String) && !fn.nodeName && fn.constructor != Array && /^[\s[]?function/.test(fn + "");
+		if( t )
+			fn[s]   = t;
+		if( o )
+			fn[v]   = o;
+		return r;
+        
+}*/
+
+
+//alert( Array.isArray([]) );
+
+//alert( $.isWindow(window) );
+
+//alert( null == null );
+
+/*var a = 10;
+window.a = 10;
+
+window.open();*/
+
+//alert( typeof NaN );
+
+//alert( $.isNumeric(123) );
+
+//alert( isFinite( Number.MAX_VALUE + Number.MAX_VALUE ) );
+
+
+/*var a = new Date;
+
+//alert( typeof a );
+
+alert( $.type(a) );*/
+
+
+//alert( {}.toString.call([]) =='[object Array]' );
+
+//alert( {}.toString.call(new Date) );
+
+//alert( $.type(undefined) );  //'undefined'
+
+alert( $.type([]) );  //'[object Array]' ->　array
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

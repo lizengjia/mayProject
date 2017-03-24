@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+$(function(){
+	
+	//alert( $('#input1').val() );
+	//$('#input1').val('hi');
+	
+	//valHooks : option select radio checkbox
+	
+	//alert( $('option').eq(0).get(0).nodeName );
+	
+	/*$('#input2').click(function(){
+		
+		alert( $('select').val() );
+		
+	});*/
+	
+	//$('#input1').val(123123);
+	
+	//$('#input2').val(['hello']);
+	
+	$('select').val(222);
+});
+
+/*window.onload = function(){
+	var oP = document.getElementsByTagName('option')[0];
+	alert( oP.attributes.value.specified );
+};*/
+
+</script>
+</head>
+
+<body>
+<input type="text" id="input1" value="hello">
+<select multiple>
+	<option>111</option>
+    <option disabled>222</option>
+    <option>333</option>
+</select>
+<input type="checkbox" id="input2" value="hello">
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+$(function(){
+	
+	$('#div1').on('click',function(a){
+		alert(1);
+	});
+	$('#div1').on('click',function(b){
+		alert(2);
+	});
+	$('#div1').on('click','span:first',function(c){
+		alert(4);
+	});
+	$('#div1').on('click','p:first',function(c){
+		alert(5);
+	});
+	/*$('#div1').on('mouseenter',function(){
+		alert(3);
+	});*/
+	
+	/*$('#div1').on('click.aaa',function(a){
+		alert(1);
+	});
+	$('#div1').on('click',function(a){
+		alert(2);
+	});*/
+	
+	//$('#div1').trigger('click.aaa');
+	
+	
+	/*$('#div1').on('click.bbb.aaa',function(b){ 
+		alert(2);
+	});*/
+	
+	$('#div1').on('click',function(event){ 
+		alert(2);
+		//event.preventDefault();
+		//event.stopPropagation();
+		return false;  //阻止冒泡和阻止默认事件
+	});
+	
+	
+	var elemData = {
+		events : {
+			'click' : [      //arr  arr.delegateCount 委托的个数  arr.length = 2
+				{},   //委托的,
+				{
+					data: undefined,
+					guid: 3,
+					handler: function (){},
+					namespace: "",
+					needsContext: false,
+					origType: "click",
+					selector: "span",
+					type: "click"
+				},
+				{}
+			],
+			'mouseover' : [
+				{}
+			]
+		},
+		handle : function(e){}
+	};
+	
+});
+
+</script>
+</head>
+
+<body>
+<div id="div1">div<span>span<p>p</p></span></div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+$(function(){
+	
+	for(var attr in $.support){
+		
+		$('body').append( '<div>'+attr+':'+$.support[attr]+'</div>' );
+		
+	}
+	
+	/*var oDiv = document.getElementById('div1');
+	
+	oDiv.onfocusin = function(){
+		alert(123);
+	};*/
+	
+	/*var div = document.createElement('div');
+	
+	div.style.backgroundColor = 'red';
+	
+	div.cloneNode(true).style.backgroundColor = '';
+	
+	alert( div.style.backgroundColor );*/
+	
+	/*var div = $('<div>');
+	
+	div.css('backgroundColor','red');
+	
+	div.clone().css('backgroundColor','');
+	
+	alert( div.css('backgroundColor') );*/
+	
+});
+
+
+</script>
+</head>
+
+<body>
+<div id="div1">
+<input type="text">
+</div>
+</body>
+</html>

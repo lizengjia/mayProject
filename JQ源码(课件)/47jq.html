@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+$(function(){
+	
+	//$('div').remove();
+	
+	//$('div').detach();
+	
+	/*$('div').click(function(){
+		alert(123);
+	});
+	
+	var $div = $('div').detach();
+	
+	$('body').append( $div );*/
+	
+	//$('div').empty();
+	
+	//console.log($('div').text());
+	
+	//$('div').text('<h1>标题</h1>');
+	
+	$('div').click(function(){
+		alert(123);
+	});
+	
+	$('span').click(function(){
+		alert(456);
+	});
+	
+	var cloneDiv = $('div').clone(true,false);
+	
+	$('body').append( cloneDiv );
+	
+});
+
+</script>
+</head>
+
+<body>
+<div>div
+	<span>span
+    	<p>p</p>
+    </span>
+</div>
+
+</body>
+</html>

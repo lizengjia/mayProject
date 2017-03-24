@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+/*$(function(){
+	
+	function show(){
+		alert(this);
+	}
+	
+	$('input:eq(0)').click(  $.proxy(show,window)  );
+	
+	$('input:eq(1)').click(function(){
+		
+		$('input:eq(0)').off();
+		
+	});
+	
+});*/
+
+
+/*function show(n1,n2){
+	alert(n1);
+	alert(n2);
+	alert(this);
+}
+
+$.proxy(show,document,3)(4);*/
+
+var obj = {
+	show : function(){
+		alert(this);
+	}
+};
+
+$(document).click( $.proxy(obj,'show') );
+
+//$.proxy(obj,'show') ->  $.proxy(obj.show,obj)
+
+</script>
+</head>
+
+<body>
+<input type="button" value="点击">
+<input type="button" value="取消绑定">
+</body>
+</html>

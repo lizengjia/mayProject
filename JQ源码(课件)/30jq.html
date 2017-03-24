@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+/*jQuery.extend({
+	queue                push()
+	dequeue              shift()
+	_queueHooks
+});
+jQuery.fn.extend({
+	queue
+	dequeue
+	delay
+	clearQueue
+	promise
+});*/
+
+//队列中存储的都是函数
+
+$(function(){
+	
+	/*function aaa(){
+		alert(1);
+	}
+	
+	function bbb(){
+		alert(2);
+	}*/
+	
+	//$.queue( document , 'q1' , aaa );   
+	//$.queue( document , 'q1' , bbb );
+	//$.queue( document , 'q1' , [aaa,bbb] );   
+	//console.log(   $.queue( document , 'q1' )   );
+	//$.dequeue( document,'q1' );   //aaa()
+	//$.dequeue( document,'q1' );   //bbb()
+	
+	
+	
+	
+	
+	
+	function aaa(){
+		alert(1);
+	}
+	
+	function bbb(){
+		alert(2);
+	}
+	
+	$(document).queue('q1',aaa);
+	$(document).queue('q1',bbb);
+	
+	//console.log(  $(document).queue('q1')  );
+	
+	$(document).dequeue('q1');
+	$(document).dequeue('q1');
+	
+});
+
+
+//[   ]
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

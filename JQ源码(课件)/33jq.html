@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+/*jQuery.fn.extend({
+	attr
+	removeAttr
+	prop
+	removeProp
+	addClass
+	removeClass
+	toggleClass
+	hasClass
+	val
+});
+jQuery.extend({
+	valHooks
+	attr
+	removeAttr
+	attrHooks
+	propFix
+	prop
+	propHooks
+});*/
+
+$(function(){
+	
+	//$('#div1').attr('title','hello');
+	//alert( $('#div1').attr('id') );
+	
+	//$('#div1').prop('title','hello');
+	//alert( $('#div1').prop('id') );
+	
+	//setAttribute()
+	//. |  []
+	
+	//var oDiv = document.getElementById('div1');
+	//oDiv.setAttribute('title','hello');
+	//oDiv.title = 'hello';
+	//oDiv['title'] = 'hello';
+	
+	//$('#div1').attr('miaov','妙味');
+	//$('#div1').prop('miaov','妙味');
+	
+	//alert($('#div1').attr('miaov'));
+	//alert($('#div1').prop('miaov'));
+	
+	//alert($('#div1').prop('href'));
+	
+	//$('#div1').removeAttr('id');
+	//alert($('#div1').attr('id'));
+	
+	
+	//$(document).attr('title','hello');
+	
+	//$('#div1').attr('miaov');
+	//checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped
+	
+	//alert(  $('input').attr('checked')  );   //checked
+	//alert(  $('input').prop('checked')  );   //true
+	
+	//$('input').attr('checked',true);
+	
+	$('#div1').removeAttr('class');
+	
+});
+
+</script>
+</head>
+
+<body>
+<a id="div1" miaov="妙味" class="box" href="miaov.com">aaaaaaaaaaaaaaaaa</a>
+<!--<input type="checkbox">-->
+<!--<input type="text" tabindex="2">
+<input type="text" tabindex="1">-->
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:200px; height:200px; background:red; position:absolute;}
+</style>
+<script src="jquery-2.0.3.js"></script>
+<script>
+$(function(){
+	
+	/*$('input').click(function(){
+		
+			
+		$('#div1').animate({ width : 300 },1000);
+		$('#div1').animate({ height : 300 },1000);
+		$('#div1').animate({ left : 300 },1000);
+		
+	});*/
+	
+	//jQuery.fx.off = true;  //关闭页面所有的运动
+	
+	$('input').click(function(){
+		
+			
+		/*$('#div1').animate({ opacity : 0.5 },1000,'linear',function(){
+			
+		});*/
+		
+		$('#div1').animate({ width : 400 },{
+			duration : 'slow',
+			easing : 'linear',
+			complete : function(){
+				alert(111);
+			}
+		});
+		
+		
+	});
+	
+});
+
+</script>
+</head>
+
+<body>
+<input type="button" value="点击">
+<div id="div1"></div>
+</body>
+</html>

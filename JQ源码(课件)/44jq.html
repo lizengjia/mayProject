@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+$(function(){
+	
+	//$('ul').find( $('li') ).css('background','red');
+	
+	//$('ul').find('li').css('background','red');
+	
+	//console.log( $('div:last').is('.box') );
+	
+	//console.log( $('div:first').is('div:last') );
+	
+	//console.log( $('#div1').index() );
+	
+	//console.log( $('#span1').index() );
+	
+	//console.log( $('#span1').index('span') );
+	
+	//console.log( $('span').index( $('#span1') ) );
+	
+	//$('#div2').closest('.box').css('border','1px red solid');
+	
+	//$('#div2').closest('.box').css('border','1px red solid');
+	
+	$('#div2').closest('.box', $('body').get(0) ).css('border','1px red solid');
+	
+	
+});
+
+</script>
+</head>
+
+<body>
+<!--<ul>
+	<li>
+    	<ul>
+        	<li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </li>
+    <li></li>
+    <li></li>
+</ul>
+<ol>
+	<li></li>
+    <li></li>
+    <li></li>
+</ol>-->
+<!--<div class="box">div1</div>
+<div>div2</div>-->
+
+<!--<div>div<span>span</span></div>
+<div id="div1">div<span id="span1">span</span></div>
+<div>div<span>span</span></div>-->
+
+<div id="div1" class="box">aaaaa
+	<div id="div2">bbbbb</div>
+</div>
+
+</body>
+</html>

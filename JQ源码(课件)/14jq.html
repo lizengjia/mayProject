@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+
+<!--<script>
+
+var str = '{"name":"hello"}';
+
+alert($.parseJSON(str).name);
+
+JSON.parse和eval
+
+JSON.stringify()
+
+</script>-->
+</head>
+
+<body>
+
+<p id="someElement"></p>
+<p id="anotherElement"></p>
+<script>
+var xml = "<rss version='2.0'><channel><title>RSS Title</title></channel></rss>",
+xmlDoc = $.parseXML( xml ),
+$xml = $( xmlDoc ),
+$title = $xml.find( "title" );
+// Append "RSS Title" to #someElement
+$( "#someElement" ).append( $title.text() );
+// Change the title to "XML Title"
+$title.text( "XML Title" );
+// Append "XML Title" to #anotherElement
+$( "#anotherElement" ).append( $title.text() );
+
+
+<parsererror>错误的信息</parsererror>
+
+ActiveXObject
+
+
+function Aaa(){
+	
+	this.defaults = {
+		show : $.noop
+	};
+	
+}
+Aaa.prototype.init = function(opt){
+	
+	$.extend( this.defaults , opt );
+	
+};
+
+</script>
+
+</body>
+</html>

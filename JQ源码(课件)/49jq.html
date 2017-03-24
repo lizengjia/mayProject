@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+$(function(){
+	
+	//$('div').append( $('span') ).css('border','1px red solid');
+	
+	//$('span').appendTo( $('div') ).css('border','1px red solid');
+	
+	//$('span').appendTo( 'div' ).css('border','1px red solid');
+	
+	//$('span').wrap('<div>');
+	//$('span').wrapAll('<div>');
+	//$('span').wrapInner('<div>');
+	//$('span').unwrap();
+	
+	
+	/*$('span').wrapAll(function(){
+		return '<div>';
+	});*/
+	
+	$('span').wrapAll('<div><p></p></div>');
+});
+
+</script>
+</head>
+
+<body>
+<!--<span>span</span>
+<div>div</div>-->
+
+<span>span</span>
+<span>span</span>
+<span>span</span>
+</body>
+</html>

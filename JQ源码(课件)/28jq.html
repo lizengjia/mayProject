@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+/*jQuery.extend({
+	acceptData
+	hasData
+	data
+	removeData
+	_data
+	_removeData
+});
+
+jQuery.fn.extend({
+	data
+	removeData
+});*/
+
+/*Data.prototype = {
+	key
+	set
+	get
+	access
+	remove
+	hasData
+	discard
+};*/
+
+$(function(){
+	
+	/*$('#div1').data('name','hello');
+	
+	$('#div1').removeData('name');
+	
+	alert( $('#div1').data('name') );*/
+	
+	/*$.data(document.body , 'age' , 30);
+	
+	alert( $.hasData(document.body,'age') );
+	
+	$.removeData(document.body , 'age');
+	
+	alert( $.hasData(document.body,'age') );*/
+	
+	//alert( $.data(document.body,'age') );
+	
+	
+	//var obj = { name : "hello" };
+	
+	/*Object.freeze(obj);
+	
+	obj.name = 'hi';
+	
+	alert( obj.name );*/
+	
+	
+	/*Object.defineProperty( obj, 0, {
+		get: function() {
+			return {};
+		}
+	});
+	alert(obj[0]);
+	obj[0] = 123;
+	alert(obj[0]);*/
+	
+	//$.data(document.body , 'age' , 30);
+	//$.data(document.body , 'job' , 'it');
+	
+	$.data(document.body ,{ 'age' : 30 , 'job' : 'it' , 'allName' : '妙味课堂'});
+	
+	$.removeData(document.body , ['age','job','all-name']);
+	
+	$.data($('#div1'),'name','hello');
+});
+
+</script>
+</head>
+
+<body jQuery203089541586732714850.8840931279098725="1">
+<div id="div1" jQuery203089541586732714850.8840931279098725="2"></div>
+</body>
+</html>

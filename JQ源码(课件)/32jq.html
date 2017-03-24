@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:100px; height:100px; background:red; position:absolute;}
+</style>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+//delay() : 延迟队列的执行
+
+$(function(){
+
+	$('#div1').click(function(){
+		
+		//$(this).animate({width : 300},2000).delay(2000).animate({left : 300},2000); 
+		
+		$(this).animate({width : 300},2000).animate({left : 300},2000); 
+		
+		$(this).promise().done(function(){
+			alert(123);
+		});
+		
+	});
+	
+	
+});
+
+
+</script>
+</head>
+
+<body>
+<div id="div1"></div>
+</body>
+</html>

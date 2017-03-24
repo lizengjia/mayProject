@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:100px; height:100px; background:red; padding:10px; border:1px blue solid; margin:5px;}
+</style>
+<script src="jquery-2.0.3.js"></script>
+<script>
+$(function(){
+	
+	//console.log( $('#div1').css('opacity') );
+	
+	//$('#div1').width()/height()/innerWidth()/innerHeight()/outerWidth()/outerHeight()
+	
+	//$('#div1').width() ->  $('#div1').css('width')
+	
+	//console.log($('#div1').width());  //100   width
+	//console.log($('#div1').innerWidth());  //120   width + padding
+	//console.log($('#div1').outerWidth());  //122   width + padding + border
+	//console.log($('#div1').outerWidth(true));  //132 width + padding + border + margin
+	
+	//$('#div1').width(200);   //width = 200
+	//$('#div1').innerWidth(200);   //width = 200 - padding
+	//$('#div1').outerWidth(200);   //width = 200 - padding - border
+	//$('#div1').outerWidth(200,true);   //width = 200 - padding - border - margin
+	
+	//console.log($('#div1').get(0).offsetWidth);  //0
+	
+	//console.log( $('#div1').width() );  //100
+	
+	/*$('#div1').width()  ,  innerWidth()   ,  outerWidth()
+	
+	$.css()
+	
+	$.style()
+	
+	content/padding/border/margin
+	
+	cssHooks.get()
+	
+	cssHooks.set()
+	
+	function setPositiveNumber(){}
+	function augmentWidthOrHeight(){}
+	function getWidthOrHeight(){}*/
+	//$(window).height()
+	//$(document).height()
+	
+	//$('div:visible')
+	
+	$('div').animate({ margin : '10px 20px 30px 40px'  });
+	
+	marginLeft  -> 40
+	marginRight -> 20
+	marginTop  -> 10
+	marginBottom -> 30
+	
+});
+</script>
+</head>
+
+<body>
+<div id="div1" style="display:table-column">aaaaaaaaaaa</div>
+</body>
+</html>

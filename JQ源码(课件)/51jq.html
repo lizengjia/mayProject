@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:100px;}
+</style>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+
+$(function(){
+
+	
+	
+	//alert(window.getComputedStyle( $('#div1').get(0) , null )['filter']);
+	
+	//alert(window.getComputedStyle( $('#div1').get(0) , null ).getPropertyValue('filter'));
+	
+	/*var $span = $('<span>');
+	
+	$span.css('width','100px');
+	
+	$span.css('width');*/
+	
+	//console.log($('#div1').css('margin-left'));
+	
+	$('#div1').css('width','+=100');
+	
+});
+
+</script>
+</head>
+
+<body>
+<div id="div1">aaaaaaaaaaaa</div>
+</body>
+</html>

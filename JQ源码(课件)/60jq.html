@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:100px; height:100px; background:red; }
+#div2{ width:100px; height:30px; background:red; margin-top:20px;}
+#div3{ width:100px; height:30px; background:red; margin-top:20px;}
+</style>
+<script src="jquery-2.0.3.js"></script>
+<script>
+$(function(){
+	
+	
+	$('input').eq(0).click(function(){
+		
+		//$(document.documentElement).animate({ scrollTop : 600 },2000);
+		
+		$('#div1').animate({ width : 300 },2000).animate({ height : 300 },2000);
+		
+	});
+	
+	$('input').eq(1).click(function(){
+		
+		//$(document.documentElement).animate({ scrollTop : 600 },2000);
+		
+		//$('#div1').stop();  //默认的，停止当前运动，不会影响队列的后续运动
+		
+		//$('#div1').stop(true);
+		
+		//$('#div1').stop(true,true);  //会停止到结束位置
+		
+		$('#div1').finish();
+		
+	});
+	
+	
+});
+
+</script>
+</head>
+
+<body style="height:2000px;">
+<input type="button" value="点击"><input type="button" value="停止运动">
+<div id="div1"></div>
+</body>
+</html>

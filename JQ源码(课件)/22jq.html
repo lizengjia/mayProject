@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+/*function aaa(){
+	alert(1);
+	return false;
+}
+
+function bbb(){
+	alert(2);
+}
+
+function ccc(){
+	alert(3);
+}*/
+
+/*var cb = $.Callbacks('once');
+
+cb.add( aaa );
+cb.add( bbb );
+
+cb.fire();
+cb.fire();*/
+
+/*var cb = $.Callbacks('memory');
+
+cb.add( aaa );
+
+cb.fire();
+
+cb.add( bbb );*/
+
+/*var cb = $.Callbacks('unique');
+
+cb.add( aaa );
+cb.add( aaa );
+
+cb.fire();*/
+
+
+
+/*var cb = $.Callbacks('stopOnFalse');
+
+cb.add( aaa );
+cb.add( bbb );
+
+cb.fire();*/
+
+/*var cb = $.Callbacks('once memory');
+
+cb.add( aaa );
+
+cb.fire();
+
+cb.add( bbb );
+
+cb.fire();
+
+options : { once : true , memory : true }
+
+optionsCache : {
+	'once memory' : { once : true , memory : true }
+}*/
+
+
+function aaa(n){
+	alert('aaa' + n);
+	return false;
+}
+
+function bbb(n){
+	alert('bbb'+n);
+}
+
+var cb = $.Callbacks();
+
+//cb.add( aaa );
+//cb.add( bbb );
+
+cb.add(aaa,bbb);
+
+cb.fire('hello');
+cb.fire('hello');
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

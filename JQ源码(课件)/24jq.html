@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+/*jQuery.extend({
+	
+	Deferred : function(){},
+	when : function(){}
+	
+});
+
+$.Deferred();   ->   $.Callbacks();
+$.when();*/
+
+
+/*var cb = $.Callbacks();
+
+setTimeout(function(){
+	
+	alert(111);
+	cb.fire();
+	
+},1000);
+
+cb.add(function(){
+	alert(222);
+});
+
+
+var dfd = $.Deferred();
+
+setTimeout(function(){
+	
+	alert(111);
+	dfd.resolve();
+	
+},1000);
+
+dfd.done(function(){
+	alert(222);
+});
+
+
+
+
+setTimeout(function(){
+	
+	alert(111);
+	
+},1000);
+
+alert(222);*/
+
+
+
+
+/*var dfd = $.Deferred();
+
+setTimeout(function(){
+	
+	alert(111);
+	dfd.notify();
+	
+},1000);
+
+dfd.progress(function(){
+	alert(222);
+});*/
+
+
+/*$.ajax({
+	url : 'xxx.php',
+	success : function(){
+		alert('成功');
+	},
+	error : function(){
+		alert('失败');
+	}
+});*/
+
+
+//$.ajax('xxx.php').done(function(){ alert('成功'); }).fail(function(){ alert('失败'); });
+
+
+
+
+/*var dfd = $.Deferred();
+
+setTimeout(function(){
+	
+	//alert(111);
+	//dfd.resolve();
+	dfd.reject();
+	
+},1000);
+
+dfd.done(function(){
+	alert('成功');
+}).fail(function(){
+	alert('失败');
+});*/
+
+
+
+/*var dfd = $.Deferred();
+
+setInterval(function(){
+	
+	alert(111);
+	//dfd.resolve();
+	//dfd.reject();
+	dfd.notify();
+	
+},1000);
+
+dfd.done(function(){
+	alert('成功');
+}).fail(function(){
+	alert('失败');
+}).progress(function(){
+	alert('进度中');
+});*/
+
+
+
+
+/*$(function(){
+	
+	var cb = $.Callbacks('memory');
+
+	cb.add(function(){
+		alert(1);
+	});
+	
+	cb.fire();
+	
+	$('input').click(function(){
+		
+		cb.add(function(){
+			alert(2);
+		});
+		
+	});*/
+	
+	
+/*	var dfd = $.Deferred();
+
+	setTimeout(function(){
+		
+		alert(111);
+		dfd.resolve();
+		
+	},1000);
+	
+	dfd.done(function(){
+		alert('aaa');
+	});
+	
+	$('input').click(function(){
+		
+		dfd.done(function(){
+			alert('bbb');
+		});
+		
+	});
+	
+	
+});
+
+
+done
+fail
+progress
+
+resolve
+reject
+notify*/
+
+
+
+
+/*function aaa(){
+	
+	var dfd = $.Deferred();
+	
+	alert( dfd.state() );
+	
+	setTimeout(function(){
+		
+		dfd.resolve();
+		
+		alert( dfd.state() );
+		
+	},1000);
+	
+	
+	return dfd.promise();
+	
+}
+
+var newDfd = aaa();
+
+newDfd.done(function(){
+	alert('成功');
+}).fail(function(){
+	alert('失败');
+});*/
+
+//newDfd.reject();
+
+
+//alert(i^1);
+
+
+
+/*var dfd = $.Deferred();
+
+setTimeout(function(){
+	
+	//dfd.resolve();
+	dfd.reject('hi');
+	
+},1000);*/
+
+/*dfd.always(function(){
+	
+	
+	alert('hello');
+	
+	
+});*/
+
+/*dfd.then(function(){
+	alert(1);
+},function(){
+	alert(arguments[0]);
+},function(){
+	alert(3);
+});*/
+
+
+var dfd = $.Deferred();
+
+setTimeout(function(){
+	
+	dfd.resolve('hi');
+	
+},1000);
+
+var newDfd = dfd.pipe(function(){
+	
+	return arguments[0] + '妙味';
+	
+});
+
+newDfd.done(function(){
+	alert( arguments[0] );
+});
+</script>
+</head>
+
+<body>
+<input type="button" value="点击">
+</body>
+</html>

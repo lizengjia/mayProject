@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+
+<script>
+
+//$.extend()
+//$.fn.extend()
+
+//当只写一个对象自变量的时候，JQ中扩展插件的形式
+
+/*$.extend({     //扩展工具方法
+	aaa : function(){
+		alert(1);
+	},
+	bbb : function(){
+		alert(2);
+	}
+});
+
+$.fn.extend({     //扩展JQ实例方法
+	aaa : function(){
+		alert(3);
+	},
+	bbb : function(){
+		alert(4);
+	}
+});
+
+
+$.aaa();
+$.bbb();
+
+$().aaa();
+$().bbb();
+
+
+$.extend();  -> this -> $  -> this.aaa  ->  $.aaa()
+$.fn.extend(); -> this -> $.fn -> this.aaa ->  $().aaa()*/
+
+
+//当写多个对象自变量的时候 , 后面的对象都是扩展到第一个对象身上
+
+/*var a = {};
+
+$.extend( a , { name : 'hello' } , { age : 30 } );
+
+console.log( a );*/
+
+//还可以做  深拷贝 和 浅拷贝
+
+/*var a = {};
+var b = {  name : { age : 30 } };
+
+$.extend( true , a , b );
+
+//a.name = 'hi';
+
+a.name.age = 20;
+
+alert( b.name.age );*/
+
+
+
+/*jQuery.extend = jQuery.fn.extend = function(){
+	
+	定义一些变量
+	
+	if(){}   看是不是深拷贝情况
+	
+	if(){}   看参数正确不
+	
+	if(){}   看是不是插件情况
+	
+	for(){   可能有多个对象情况
+		
+		if(){}  防止循环引用
+		
+		if(){}   深拷贝
+		else if(){}   浅拷贝
+		
+	}
+	
+};*/
+
+
+//var a = {};
+//console.log( $.extend( a , { name : a } ) );
+
+var a = { name : { job : 'it' } };
+var b = { name : {age : 30} };
+
+$.extend( true , a  , b );
+
+console.log( a );
+
+
+JQ中 : 拷贝继承 : 构造函数的原型
+
+JS : 类式继承 / 原型继承
+
+new 构造函数   /  {}
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

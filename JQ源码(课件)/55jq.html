@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:200px; height:200px; background:red; display:none;}
+</style>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+/*定义一些变量
+tweeners = {};      √
+function createFxNow(){}   √  
+function createTween(){}   √
+function Animation(){}     √
+function propFilter(){}    √
+jQuery.Animation = jQuery.extend( Animation, {   √
+	tweener
+	prefilter
+});
+function defaultPrefilter(){}   √
+function Tween(){}   √
+Tween.prototype = {  √
+	init
+	cur
+	run
+};
+Tween.propHooks = {};   √
+jQuery.each([ "toggle", "show", "hide" ], function(){});   √
+jQuery.fn.extend({
+	fadeTo      √
+	animate     √
+	stop         √
+	finish       √
+});
+function genFx(){}     √
+jQuery.each({   √
+	slideDown
+	slideUp
+	slideToggle
+	fadeIn
+	fadeOut
+	fadeToggle
+}, function() {});
+jQuery.speed = function(){};     √
+jQuery.easing = {     √
+	linear
+	swing
+};
+jQuery.timers = [];              √
+jQuery.fx.tick = function(){};    √
+jQuery.fx.timer = function(){};    √
+jQuery.fx.interval = 13;     √
+jQuery.fx.start = function(){};   √
+jQuery.fx.stop = function(){};   √
+jQuery.fx.speeds = {}; √*/   
+
+/*show
+hide
+toggle
+slideDown
+slideUp
+slideToggle
+fadeIn
+fadeOut
+fadeToggle
+fadeTo*/
+
+$(function(){
+	
+	$('input').click(function(){
+		
+		//$('#div1').hide(1000);   //width height opacity
+		
+		//$('#div1').toggle(1000); 
+		
+		//$('#div1').slideToggle(1000);  //height
+		
+		//$('#div1').fadeToggle(1000);   //opacity
+		
+		/*$('#div1').animate({ width : 400 },4000,'linear',function(){
+			alert(123);
+		});*/
+		
+		//$('#div1').animate({ width : 'hide' , height : 'hide' , opacity : 'hide' },1000,'linear',function(){
+			//alert(123);
+		//});
+		
+		
+		//$('#div1').slideUp(1000);
+		
+		//$('#div1').animate({ height : 'toggle' },1000,'linear',function(){
+			//alert(123);
+		//});
+		
+		//$('#div1').fadeTo(1000,0.5);
+		
+		$('#div1').animate({ opacity : 0.5 },1000,'linear',function(){
+			
+		});
+		
+	});
+	
+});
+
+</script>
+</head>
+
+<body>
+<input type="button" value="点击">
+<div id="div1"></div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script>
+
+//var $ = 123;
+//var jQuery = 456;
+
+</script>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+//alert( $.expando );
+//$()  jQuery()
+
+/*var miaov = $.noConflict(true);
+
+
+miaov(function(){
+	
+	//alert($);
+	
+	alert( jQuery );
+	
+});*/
+
+/*$(function(){});
+
+$(document).ready(function(){});
+
+$().ready();
+
+$.ready()
+
+DOMContentLoaded
+
+window.onload = function(){
+};*/
+
+
+/*$(function( arg ){
+	
+	alert(arg);
+	
+});
+
+
+$(document).ready(function(){
+});*/
+
+/*$(document).on('ready',function(){
+	alert(123);
+});*/
+
+//readyList.resolve();
+
+
+$.holdReady(true);
+
+$.getScript('a.js',function(){
+	$.holdReady(false);
+});
+
+
+$.holdReady(true);
+
+$.getScript('b.js',function(){
+	$.holdReady(false);
+});
+
+$.holdReady(true);
+
+$.getScript('c.js',function(){
+	$.holdReady(false);
+});
+
+
+$(function(){
+	alert(2);
+});
+
+
+</script>
+</head>
+
+<body>
+<div>aaaaa</div>
+<img src="">
+</body>
+</html>

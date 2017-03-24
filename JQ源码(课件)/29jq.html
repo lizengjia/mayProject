@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+$(function(){
+	
+	//alert($('div').html());
+	
+	//$('div').data();
+	
+	//$('#div1').data('name','hello');
+	//$('#div1').data('age','30');
+	
+	//$('#div1').data({name:'hello',age:'30'});
+	
+	//console.log( $('#div1').data('name-age') );
+	
+	//alert($('#div1').get(0).dataset.miaovAll);
+	
+	$('#div1').data('nameAge','hi');
+	$('#div1').data('name-age','hello');
+	
+	this.cache = {
+		1 : {
+			'nameAge' : 'hello',
+			'name-age' : 'hello' 
+		}
+	}
+	
+});
+</script>
+</head>
+
+<body>
+<div id="div1" data-miaov-all="妙味" class="box" title="123">aaaa</div>
+<div>bbbb</div>
+<div>cccc</div>
+</body>
+</html>

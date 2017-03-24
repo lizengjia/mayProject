@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+$(function(){
+	
+	/*$('#div1').attr('name','hello');
+	
+	alert( $('#div1').attr('name') );*/
+	
+	document.getElementById('div1').setAttribute('name','hello');
+	alert( document.getElementById('div1').getAttribute('name') );
+	
+	
+	/*$('#div1').prop('name','hello');
+	
+	alert( $('#div1').prop('name') );*/
+	
+	document.getElementById('div1')['name'] = 'hello';
+	alert( document.getElementById('div1')['name'] );
+	
+	
+	
+	$('#div1').data('name','hello');
+	
+	alert( $('#div1').data('name') );
+	
+});
+
+
+//DOM元素与对象之间互相引用，大部分浏览器就会出现内存泄漏
+
+var oDiv = document.getElementById('div1');
+var obj = {};
+
+oDiv.name = obj;
+obj.age = oDiv;
+
+$('#div1').attr('name',obj);
+$('#div1').data('name',obj);
+
+
+
+$('body').data('age',obj);
+
+
+var cache = {
+	1 : {
+		name : obj
+	},
+	2 : {
+		age : obj
+	}
+};
+
+</script>
+</head>
+
+<body>
+<div id="div1" xxx=" "></div>
+</body>
+</html>

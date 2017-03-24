@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+$(function(){
+	
+	//filter()  not()
+	
+	//$('div').filter('.box').css('border','1px red solid');
+	//$('div').not('.box').css('border','1px red solid');
+	
+	//$('div').has('.box').css('border','1px red solid');
+	
+	/*$('div').filter('.box').css('border','1px red solid');
+	
+	isSimple = /^.[^:#\[\.,]*$/    
+	
+	匹配成功 : .box div #div1  :odd     ul li
+	
+	匹配不成功 :  div:odd    ul #li   ul[title="hello"]   div.box    ul,ol*/
+	
+	/*$('div').filter(function(i,elem){
+		return elem.className == 'box';
+		
+	}).css('border','1px red solid');*/
+	
+	//var oBox = document.getElementsByClassName('box')[0];
+	//$('div').filter(oBox).css('border','1px red solid');
+	
+	$('div').has('span').css('border','1px red solid');
+	
+});
+
+</script>
+</head>
+
+<body>
+<div class="box">div1<span class="box">span</span></div>
+<div>div2</div>
+</body>
+</html>

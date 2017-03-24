@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+/*function aaa(){
+	alert(1);
+}
+
+function bbb(){
+	alert(2);
+}
+
+function ccc(){
+	alert(3);
+}
+
+var cb = $.Callbacks();
+
+cb.add( aaa );
+cb.add( bbb );
+cb.add( ccc );
+
+cb.fire();
+
+
+document.addEventListener('click',function(){ alert(1); },false);
+document.addEventListener('click',function(){ alert(2); },false);
+document.addEventListener('click',function(){ alert(3); },false);*/
+
+
+/*function aaa(){
+	alert(1);
+}
+
+(function(){
+	
+	function bbb(){
+		alert(2);
+	}
+	
+})();
+
+aaa();
+bbb();*/
+
+/*var cb = $.Callbacks();
+
+function aaa(){
+	alert(1);
+}
+
+cb.add(aaa);
+
+(function(){
+	
+	function bbb(){
+		alert(2);
+	}
+	cb.add(bbb);
+	
+})();
+
+cb.fire();*/
+
+
+/*once
+memory
+unique
+stopOnFalse
+
+
+add
+remove
+has
+empty
+disable
+disabled
+lock
+locked
+fireWith
+fire
+fired*/
+
+
+function aaa(){
+	alert(1);
+}
+
+function bbb(){
+	alert(2);
+}
+
+function ccc(){
+	alert(3);
+}
+
+var cb = $.Callbacks();
+
+cb.add( aaa );
+cb.add( bbb );
+cb.add( ccc );
+
+cb.remove( bbb );
+
+cb.fire();
+</script>
+</head>
+
+<body>
+</body>
+</html>

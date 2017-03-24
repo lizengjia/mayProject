@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+/*var arr = [1,2,3,4];
+
+arr = $.grep( arr , function( n , i ){
+	
+	return n>2;
+	
+} , true );
+
+console.log( arr );*/
+
+var arr = [1,2,3,4];
+
+arr = $.map( arr , function(n){
+	
+	return [n+1];
+	
+} );
+
+console.log( arr );
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

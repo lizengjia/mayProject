@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+//$('#div1') $('.box') $('div')  $('#div1 div.box')
+//$('<li>')  $('<li>1</li><li>2</li>')
+
+
+if(){
+	$('<li>')   $('<li>1</li><li>2</li>')
+	
+	match = [ null, '<li>', null ];
+	match = [ null, '<li>1</li><li>2</li>', null ];
+	
+}
+else{
+	$('#div1') $('.box') $('div')  $('#div1 div.box')
+	$('<li>hello')
+	
+	match = null;  //$('.box') $('div')  $('#div1 div.box')
+	
+	match = ['#div1',null,'div1'];  //$('#div1')
+	
+	match = ['<li>hello','<li>',null];  //$('<li>hello')
+	
+}
+
+
+
+//if() 能进入的有:  $('<li>')  $('#div1')  
+//进一步判断 : if(){  $('<li>')  }  else {  $('#div1')   }
+
+//$('<li>',$(document))   
+
+
+
+
+$('<li>1</li><li>2</li>').appendTo( ' ul ' );
+
+this = {
+	0 : 'li',
+	1 : 'li',
+	length : 2
+}
+
+
+
+
+
+
+/*$(function(){
+	$('<li>hello').appendTo( $('ul') );
+});
+*/
+</script>
+</head>
+
+<body>
+<ul>
+</ul>
+</body>
+</html>

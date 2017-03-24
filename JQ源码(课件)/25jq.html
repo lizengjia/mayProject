@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+/*var dfd = $.Deferred();
+
+dfd.done();
+
+$.when().done();*/
+
+
+/*function aaa(){
+	var dfd = $.Deferred();
+	
+	dfd.resolve();
+	dfd.reject();
+	
+	return dfd;
+}
+
+function bbb(){
+	var dfd = $.Deferred();
+	
+	//dfd.resolve();
+	dfd.reject();
+	
+	return dfd;
+}*/
+
+/*aaa().done(function(){
+	alert('成功');
+});*/
+
+/*$.when( aaa() , bbb() ).done(function(){
+	alert('成功');
+}).fail(function(){
+	alert('失败');
+});*/
+
+
+/*
+$.when( ).done(function(){
+	alert('成功');
+});*/
+
+
+/*when的源码
+
+
+return $.Deferred();
+ 
+ arguments[0]
+ arguments[1]
+ arguments[2]
+ arguments[3]
+
+
+done()
+
+计数器 ：４*/
+
+
+/*function aaa(){
+	var dfd = $.Deferred();
+	dfd.resolve();
+	return dfd;
+}
+
+function bbb(){
+	var dfd = $.Deferred();
+	dfd.reject();
+	//return dfd;
+}
+
+$.when( 123 , 456 ).done(function(){
+	alert(arguments[0]);
+	alert(arguments[1]);
+	alert('成功');
+}).fail(function(){
+	alert('失败');
+});*/
+
+
+$.when( aaa() , 111 , bbb() , 222 ).done(function(){
+	alert('成功');
+}).fail(function(){
+	alert('失败');
+});
+</script>
+</head>
+
+<body>
+</body>
+</html>

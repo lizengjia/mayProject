@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+$(function(){
+	
+	//$(document).on('mousedown',function(ev){
+		//alert(ev.pageX);
+		//ev : jq中的event
+		//alert(ev.originalEvent);
+		//ev.originalEvent : 原生JS中的event
+		//changedTouches
+		//alert(  ev.clientY );
+	//});
+	
+	$('div').on('click',function(){
+		alert(1);
+	});
+	$('span').on('click',function(ev){
+		//alert( ev.isPropagationStopped() );
+		ev.stopPropagation();
+		console.log(ev);
+		//alert( ev.isPropagationStopped() );
+	});
+	$('span').on('click',function(ev){
+		//alert(3);
+	});
+	
+});
+
+/*document.onkeypress = function(ev){
+	var ev = ev || window.event;
+	alert(ev.charCode);  //charCode keyCode
+};*/
+
+</script>
+</head>
+
+<body style="height:2000px;">
+<div>div<span>span</span></div>
+</body>
+</html>

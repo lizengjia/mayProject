@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script>
+
+/*jQuery.fn = jQuery.prototype = {  //添加实例属性和方法
+	
+	jquery : 版本
+	
+	constructor : 修正指向问题
+	
+	init() : 初始化和参数管理
+	
+	selector : 存储选择字符串
+	
+	length : this对象的长度
+	
+	toArray() :  转数组
+	
+	get() :  转原生集合
+	
+	pushStack() :  JQ对象的入栈
+	
+	each() :  遍历集合
+	
+	ready() :  DOM加载的接口
+	
+	slice() :  集合的截取
+	
+	first() :  集合的第一项
+	
+	last() :   集合的最后一项
+	
+	eq() :   集合的指定项
+	
+	map() :   返回新集合
+	
+	end() :   返回集合前一个状态
+	
+	push() :    (内部使用)
+	
+	sort() :    (内部使用)
+	
+	splice() :  (内部使用)
+	
+};*/
+
+</script>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+//alert( $().jquery );
+
+//function Aaa(){
+//}
+//Aaa.prototype.constructor = Aaa;
+//Aaa.prototype.constructor = Array;
+
+/*Aaa.prototype.name = 'hello';
+Aaa.prototype.age = 30;*/
+
+/*Aaa.prototype = {
+	constructor : Aaa,
+	name : 'hello',
+	age : 30
+};
+
+
+var a1 = new Aaa();
+
+alert( a1.constructor );*/
+
+
+
+
+
+
+//$() jQuery()
+//$('li','ul')
+
+/*$(""), $(null), $(undefined), $(false)
+
+$('#div1') $('.box') $('div')  $('#div1 div.box')
+$('<li>')  $('<li>1</li><li>2</li>')
+
+$(this)  $(document)
+
+$(function(){})
+
+$([])  $({})*/
+
+$(function(){
+	
+	//console.log( $('li').css('background','red') );
+	
+	$('li')[1].style.background = 'red';
+	
+});
+
+/*var aLi = document.getElementsByTagName('li');
+
+for(var i=0;i<aLi.length;i++){
+	aLi[i].style.background = 'red';
+}
+
+this = {
+	0 : 'li',
+	1 : 'li',
+	2 : 'li',
+	length : 3
+};
+
+for(var i=0;i<this.length;i++){
+	this[i].style.background = 'red';
+}*/
+
+</script>
+</head>
+
+<body>
+<ul>
+	<li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>

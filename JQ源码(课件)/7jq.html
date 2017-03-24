@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+
+$(function(){
+	
+	//console.log( $('div').toArray() );
+	
+	//$('div') : { 0 : div , 1 : div , 2 : div , length : 3 }
+	
+	//$('div').toArray() : [div,div,div]
+	
+	$('div').get(-1).innerHTML = '222222222';
+	
+	/*for(var i=0;i<$('div').get().length;i++){
+		$('div').get(i).innerHTML = '222222';
+	}
+	*/
+	
+});
+
+</script>
+</head>
+
+<body>
+<div>11111111</div>
+<div>111111111</div>
+<div>111111111</div>
+</body>
+</html>

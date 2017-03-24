@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-2.0.3.js"></script>
+<script>
+
+/*jQuery.event.special
+load
+focus
+blur
+click
+beforeunload
+mouseenter
+mouseleave
+focusin
+focusout*/
+
+$(function(){
+	
+	/*$('#div1').on('click',function(){
+		alert(1);
+	});
+	
+	$('input').on('click',function(){
+		alert(2);
+	});
+	
+	$(window).on('load',function(){});
+	$('img').on('load',function(){});
+	
+	$('img').trigger('load');*/
+	
+	/*$('#div1').on('focus',function(){
+		alert(1);
+	});
+	
+	$('input').on('focus',function(){
+		alert(2);
+	});
+	
+	$('input').trigger('focus');*/
+	
+	/*$('#div1').delegate('input','focus',function(){
+		alert(1);
+	});*/
+	
+	//$('#input1').on('click',function(){});
+	//$('#input1').trigger('click');
+	
+	/*$('a').on('click',function(){
+		alert(1);
+	});
+	
+	$('a').trigger('click');*/
+	
+	/*$(window).on('beforeunload',function(){
+		return 123;
+	});*/
+	
+	$('#div1').on('focusin',function(){
+		alert(1);
+	});
+	
+	//$('input').trigger('focusin');
+	
+});
+
+</script>
+</head>
+
+<body>
+<div id="div1"><input type="text"></div>
+<input type="checkbox" id="input1">
+<a href="http://www.baidu.com">aaaaaa</a>
+</body>
+</html>
