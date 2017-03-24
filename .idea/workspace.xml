@@ -23,26 +23,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JQ源码(课件)/demo/test.html">
+      <file leaf-file-name="callback.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JQ源码(课件)/demo/callback.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="51" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="54" />
+            <state relative-caret-position="504">
+              <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery-2.0.3.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JQ源码(课件)/jquery-2.0.3.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="2889" column="15" selection-start-line="2889" selection-start-column="15" selection-end-line="2889" selection-end-column="15" />
               <folding>
-                <element signature="n#ul#1;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#79398#80009#0" expanded="false" />
+                <element signature="e#80132#80940#0" expanded="false" />
+                <element signature="e#81002#81444#0" expanded="false" />
+                <element signature="e#81599#81682#0" expanded="false" />
+                <element signature="e#81746#81806#0" expanded="false" />
+                <element signature="e#81870#81932#0" expanded="false" />
+                <element signature="e#81980#82004#0" expanded="false" />
+                <element signature="e#82067#82161#0" expanded="false" />
+                <element signature="e#82205#82230#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/JQ源码(课件)/test.html">
+      <file leaf-file-name="21jq.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JQ源码(课件)/21jq.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="796">
-              <caret line="234" column="40" selection-start-line="234" selection-start-column="40" selection-end-line="234" selection-end-column="40" />
-              <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="441">
+              <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="108" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,6 +71,7 @@
         <option value="$PROJECT_DIR$/JQ源码(课件)/jquery-2.0.3.js" />
         <option value="$PROJECT_DIR$/JQ源码(课件)/demo/test.html" />
         <option value="$PROJECT_DIR$/JQ源码(课件)/test.html" />
+        <option value="$PROJECT_DIR$/JQ源码(课件)/demo/callback.html" />
       </list>
     </option>
   </component>
@@ -98,6 +115,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -150,8 +169,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -163,9 +180,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\project\JQ源码(课件)\demo" />
       <recent name="F:\project\JQ源码(课件)" />
       <recent name="F:\project\JQ源码(课件)\css" />
-      <recent name="F:\project\JQ源码(课件)\demo" />
     </key>
   </component>
   <component name="RunManager">
@@ -244,17 +261,18 @@
       <workItem from="1489742290661" duration="2546000" />
       <workItem from="1490170039583" duration="2945000" />
       <workItem from="1490232385526" duration="5082000" />
+      <workItem from="1490321192800" duration="7332000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28694000" />
+    <option name="totallyTimeSpent" value="36026000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14225501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12012645" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0993117" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -284,119 +302,26 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/a.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/jquery-2.0.3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4116">
-          <caret line="208" column="16" selection-start-line="208" selection-start-column="16" selection-end-line="208" selection-end-column="16" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/1jq.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/2jq.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/简化JQ的框架.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="36" column="37" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/a.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/jquery-2.0.3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/1jq.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/2jq.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/简化JQ的框架.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="36" column="37" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/a.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JQ源码(课件)/jquery-2.0.3.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
           <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
           <folding>
-            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#79398#80009#0" expanded="false" />
+            <element signature="e#80132#80940#0" expanded="false" />
+            <element signature="e#81002#81444#0" expanded="false" />
+            <element signature="e#81599#81682#0" expanded="false" />
+            <element signature="e#81746#81806#0" expanded="false" />
+            <element signature="e#81870#81932#0" expanded="false" />
+            <element signature="e#81980#82004#0" expanded="false" />
+            <element signature="e#82067#82161#0" expanded="false" />
+            <element signature="e#82205#82230#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -444,7 +369,15 @@
         <state relative-caret-position="693">
           <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
           <folding>
-            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#79398#80009#0" expanded="false" />
+            <element signature="e#80132#80940#0" expanded="false" />
+            <element signature="e#81002#81444#0" expanded="false" />
+            <element signature="e#81599#81682#0" expanded="false" />
+            <element signature="e#81746#81806#0" expanded="false" />
+            <element signature="e#81870#81932#0" expanded="false" />
+            <element signature="e#81980#82004#0" expanded="false" />
+            <element signature="e#82067#82161#0" expanded="false" />
+            <element signature="e#82205#82230#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -492,7 +425,15 @@
         <state relative-caret-position="693">
           <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
           <folding>
-            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#79398#80009#0" expanded="false" />
+            <element signature="e#80132#80940#0" expanded="false" />
+            <element signature="e#81002#81444#0" expanded="false" />
+            <element signature="e#81599#81682#0" expanded="false" />
+            <element signature="e#81746#81806#0" expanded="false" />
+            <element signature="e#81870#81932#0" expanded="false" />
+            <element signature="e#81980#82004#0" expanded="false" />
+            <element signature="e#82067#82161#0" expanded="false" />
+            <element signature="e#82205#82230#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -540,7 +481,15 @@
         <state relative-caret-position="441">
           <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
           <folding>
-            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#79398#80009#0" expanded="false" />
+            <element signature="e#80132#80940#0" expanded="false" />
+            <element signature="e#81002#81444#0" expanded="false" />
+            <element signature="e#81599#81682#0" expanded="false" />
+            <element signature="e#81746#81806#0" expanded="false" />
+            <element signature="e#81870#81932#0" expanded="false" />
+            <element signature="e#81980#82004#0" expanded="false" />
+            <element signature="e#82067#82161#0" expanded="false" />
+            <element signature="e#82205#82230#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -588,7 +537,15 @@
         <state relative-caret-position="14427">
           <caret line="687" column="38" selection-start-line="687" selection-start-column="38" selection-end-line="687" selection-end-column="38" />
           <folding>
-            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#79398#80009#0" expanded="false" />
+            <element signature="e#80132#80940#0" expanded="false" />
+            <element signature="e#81002#81444#0" expanded="false" />
+            <element signature="e#81599#81682#0" expanded="false" />
+            <element signature="e#81746#81806#0" expanded="false" />
+            <element signature="e#81870#81932#0" expanded="false" />
+            <element signature="e#81980#82004#0" expanded="false" />
+            <element signature="e#82067#82161#0" expanded="false" />
+            <element signature="e#82205#82230#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -643,16 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/jquery-2.0.3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4116">
-          <caret line="208" column="16" selection-start-line="208" selection-start-column="16" selection-end-line="208" selection-end-column="16" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JQ源码(课件)/1jq.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -674,9 +621,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.git/config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/JQ源码(课件)/demo/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="-58">
           <caret line="8" column="51" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="54" />
           <folding>
             <element signature="n#ul#1;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -686,11 +649,117 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JQ源码(课件)/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="234" column="40" selection-start-line="234" selection-start-column="40" selection-end-line="234" selection-end-column="40" />
+        <state relative-caret-position="670">
+          <caret line="229" column="18" selection-start-line="229" selection-start-column="18" selection-end-line="229" selection-end-column="18" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/27jq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-504">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/26jq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/30jq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/20jq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/16jq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/15jq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/14jq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/13jq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/18jq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/jquery-2.0.3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="2889" column="15" selection-start-line="2889" selection-start-column="15" selection-end-line="2889" selection-end-column="15" />
+          <folding>
+            <element signature="e#79398#80009#0" expanded="false" />
+            <element signature="e#80132#80940#0" expanded="false" />
+            <element signature="e#81002#81444#0" expanded="false" />
+            <element signature="e#81599#81682#0" expanded="false" />
+            <element signature="e#81746#81806#0" expanded="false" />
+            <element signature="e#81870#81932#0" expanded="false" />
+            <element signature="e#81980#82004#0" expanded="false" />
+            <element signature="e#82067#82161#0" expanded="false" />
+            <element signature="e#82205#82230#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/21jq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="108" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JQ源码(课件)/demo/callback.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>

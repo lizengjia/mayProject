@@ -213,25 +213,26 @@
     return adder(arguments);
 }
   console.log(add(1)(2)(3))*/
-function Box() {
-    this.sex = '男'
+function add() {
+    this.a = 1
+}
+for(var i in add){
+    console.log(i)
+}
+add.prototype.b='333';
+
+var d = new add();
+
+function C() {
+    this.d = '2'
+}
+C.prototype = new add();
+C.prototype.e = 'a'
+    var c = new C();
+    console.log(Object.keys(c))
+for(var i in c){
+    console.log(i)
 }
 
-Box.prototype.name = 'Lee';					//在原型里添加属性
-Box.prototype.age = 100;
-Box.prototype.run = function () {				//在原型里添加方法
-    return this.name + this.age + '运行中...';
-};
-var box1 = new Box();
-var box2 = new Box();
-var box = Box.prototype.constructor;
-var a = new Object();
-a.__proto__= Box.prototype
-console.log(box1.__proto__.constructor);
-console.log(box);
-console.log(Box.prototype.isPrototypeOf(a))
-    console.log(Box.hasOwnProperty('name'))
-    console.log(Box.hasOwnProperty('sex'))
-    console.log(box1.hasOwnProperty('run'))
 </script>
 </html>
