@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>切面编程</title>
+<script src="../jquery-2.0.3.js"></script>
+<script>
+
+$(function() {
+	/*function test(a,b) {
+		alert(2)
+	}
+	Function.prototype.before = function (fn) {
+		var that = this;
+		fn();
+		console.log(arguments);
+		this.apply(this, arguments)
+	};
+	test.before(function (a,b) {
+		alert(1)
+	})*/
+	/* Function.prototype.after = function (fn) {
+		var that = this;
+		return function () {
+			var resule = that.apply(this,arguments);
+			fn.apply(this,arguments)
+			return resule
+		}
+	};
+
+	var showLogin=function(){
+		console.log("上传标签为111:"+this.getAttribute('tag'));
+		console.log("打开登录浮层");
+		return 'show'
+	}
+	var log=function(){
+		console.log("上传标签为:"+this.getAttribute('tag'));
+	}
+	showLogin=showLogin.after(log);
+	document.getElementById('button').onclick=showLogin;*/
+	/*	Function.prototype.before = function(beforefn) {
+		var _self = this;
+		//保存原函数的引用
+		return function() {
+			beforefn.apply(this,arguments);//function({a:'a'}){// }
+
+			return _self.apply(this,arguments)
+		}
+	};
+	var func = function(param) {
+		console.log(param);
+		return 'aaa'
+	};
+	func.before(function(param) {
+		param = 'b';
+	})({a: "a"});*/
+	function Box(age) {
+		this.name = ['Lee', 'Jack', 'Hello'];
+		this.age = age;
+	};
+
+	Box.prototype.run = function () {
+		return this.name + this.age;
+	};
+
+	function Desk(age) {
+		Box.call(this, age);						//对象冒充
+	};
+
+	Desk.prototype = new Box();					//原型链继承
+
+	var desk = new Desk(100);
+       console.log(desk)
+})
+
+</script>
+</head>
+
+<body>
+<button id="button" tag="login">点击打开登录浮层</button>
+</body>
+</html>

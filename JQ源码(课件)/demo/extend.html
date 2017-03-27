@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="../jquery-2.0.3.js"></script>
+<script>
+
+$(function(){
+	var obj1 = {a:1,b:[1.4],c:[1]};
+	var obj2 = {a:3,b:[1,2,3],c:{d:4},d:{r:3}};
+	var obj3 = {r:3,e:[1,2,3]};
+	var obj = {};
+	var extend = function () {
+		var option, src,name,clone,
+			i = 0,
+		    deep = false,
+		    length = arguments.length,
+		    target = arguments[0];
+		if(typeof target == 'boolean'){
+			deep = target;
+			target = arguments[1];
+			i++
+		}
+		if( obj.toString.call(target).indexOf('Object') === -1 && obj.toString.call(target).indexOf('Function') === -1){
+			target = {}
+		}
+
+		for(;i<length;i++){
+			if((option = arguments[i+1]) != null){
+				for(name in option){
+					src = target[name];
+					copy = option[name];
+					if(target === copy){
+						continue
+					}
+					if(deep && copy && (obj.toString.call(copy).indexOf('Object') !== -1 || obj.toString.call(copy).indexOf('Array') !== -1)){
+						if(obj.toString.call(copy).indexOf('Array') !== -1){
+							clone = src && (obj.toString.call(src).indexOf('Array') !== -1) ? src : []
+						}else {
+							clone = src && (obj.toString.call(src).indexOf('Object') !== -1) ? src : {}
+						}
+						console.log('1')
+						extend(deep , clone, copy)
+					}else if(copy != undefined) {
+						target[name] = copy
+					}
+				}
+			}
+
+		}
+		console.log('11')
+		return target
+	};
+	extend(true,obj1,obj2)
+	var json=[
+		{
+			"object_id": "2",
+			"object_pid": "1",
+			"level": "1",
+			"object_name": "角色管理",
+			"object_url": "22",
+			"role_id": "2"
+		},
+		{
+			"object_id": "5",
+			"object_pid": "2",
+			"level": "2",
+			"object_name": "33",
+			"object_url": "3",
+			"role_id": "2"
+		},
+		{
+			"object_id": "333",
+			"object_pid": "5",
+			"level": "3",
+			"object_name": "33",
+			"object_url": "3",
+			"role_id": "2"
+		},
+		{
+			"object_id": "3333",
+			"object_pid": "333",
+			"level": "4",
+			"object_name": "33",
+			"object_url": "3",
+			"role_id": "2"
+		},
+		{
+			"object_id": "6",
+			"object_pid": "2",
+			"level": "2",
+			"object_name": "YHDD",
+			"object_url": "55",
+			"role_id": "2"
+		},
+		{
+			"object_id": "7",
+			"object_pid": "2",
+			"level": "2",
+			"object_name": "法雷",
+			"object_url": "55",
+			"role_id": "2"
+		},
+		{
+			"object_id": "11",
+			"object_pid": "2",
+			"level": "2",
+			"object_name": "6",
+			"object_url": "6",
+			"role_id": "2"
+		},
+		{
+			"object_id": "3",
+			"object_pid": "1",
+			"level": "2",
+			"object_name": "用户管理",
+			"object_url": "33·",
+			"role_id": "2"
+		},
+		{
+			"object_id": "8",
+			"object_pid": "3",
+			"level": "2",
+			"object_name": "优化33",
+			"object_url": "99",
+			"role_id": "2"
+		},
+		{
+			"object_id": "9",
+			"object_pid": "3",
+			"level": "1",
+			"object_name": "评价5",
+			"object_url": "99",
+			"role_id": "2"
+		},
+		{
+			"object_id": "4",
+			"object_pid": "1",
+			"level": "1",
+			"object_name": "系统管理",
+			"object_url": "44",
+			"role_id": "2"
+		},
+		{
+			"object_id": "10",
+			"object_pid": "1",
+			"level": "1",
+			"object_name": "55",
+			"object_url": "55",
+			"role_id": "2"
+		}
+	];
+	var clone = function (json) {
+		var newJson = [];
+		for(var i=0;i<json.length;i++){
+             if(newJson[json[i].level-1]){
+				 newJson[json[i].level-1].push(json[i])
+			 }else {
+				 newJson[json[i].level-1]=[];
+				 newJson[json[i].level-1].push(json[i])
+			 }
+		}
+
+		return recursion(newJson);
+		function recursion(a) {
+			var leave1 = a[0];
+			var leave2 = a[1];
+			for(var i=0;i<leave1.length;i++){
+				for(var j=0;j<leave2.length;j++){
+					if(leave1[i].object_id == leave2[j].object_pid){
+						if(leave1[i].children){
+							leave1[i].children.push(leave2[j])
+						}else {
+							leave1[i].children = [];
+							leave1[i].children.push(leave2[j])
+						}
+					}
+				}
+			}
+			if(a.length>2){
+				a.shift();
+				recursion(a)
+
+			}
+			console.log('2')
+			return leave1
+		}
+
+	};
+   console.log(clone(json))
+
+
+});
+
+</script>
+</head>
+
+<body>
+<ul>
+</ul>
+</body>
+</html>
