@@ -1,0 +1,156 @@
+{% extends "layout.html" %}
+{% block title %}登录{% endblock %}
+{% block body %}
+<div class="wrapper">
+    <div id="answer" class="card_wrap">
+        <!--Q1-->
+        <div class="card_cont card1">
+              <img src="/img/adviser-man1.png">
+        </div>
+        <!--Q2-->
+        <div class="card_cont card2" >
+                <img src="/img/adviser-man2.png">
+        </div>
+        <!--Q3-->
+        <div class="card_cont card3">
+                <img src="/img/adviser-man3.png">
+        </div>
+        <div class="card_cont " >
+            <img src="/img/adviser-man2.png">
+        </div>
+        <!--Q3-->
+        <div class="card_cont ">
+            <img src="/img/adviser-man3.png">
+        </div>
+        <div class="card_cont " >
+            <img src="/img/adviser-man2.png">
+        </div>
+        <!--Q3-->
+        <div class="card_cont ">
+            <img src="/img/adviser-man3.png">
+        </div>
+        <div class="card_cont " >
+            <img src="/img/adviser-man2.png">
+        </div>
+    </div><!--/card_wrap-->
+  <div class="pre a">上一页</div>
+  <div class="but a">下一页</div>
+</div>
+
+<style>
+    .a{
+        display: none;
+        width: 100px;
+        line-height: 50px;
+        margin-right: 30px;
+    }
+</style>
+<script>
+    $(function(){
+       // $('#answer').height( document.body.clientWidth*1.3+"px")
+        $("#answer").answerSheet({});
+        //获取touch的点(兼容mouse事件)
+        var getTouchPos = function(e){
+            var touches = e.touches;
+            if(touches && touches[0]) {
+                return { x : touches[0].clientX ,
+                    y : touches[0].clientY };
+            }
+            return { x : e.clientX , y: e.clientY };
+        }
+
+        //计算两点之间距离
+        var getDist = function(p1 , p2){
+            if(!p1 || !p2) return 0;
+            return Math.sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y));
+        }
+        //计算两点之间所成角度
+        var getAngle = function(p1 , p2){
+            var r = Math.atan2(p2.y - p1.y, p2.x - p1.x);
+            var a = r * 180 / Math.PI;
+            return a;
+        };
+        //获取swipe的方向
+        var getSwipeDirection = function(p2,p1){
+            var dx = p2.x - p1.x;
+            var dy = -p2.y + p1.y;
+            var angle = Math.atan2(dy , dx) * 180 / Math.PI;
+
+            if(angle < 45 && angle > -45) return "right";
+            if(angle >= 45 && angle < 135) {
+                $(".pre").trigger('click');
+            };
+            if(angle >= 135 || angle < -135) return "left";
+            if(angle >= -135 && angle <= -45) {
+                $(".but").trigger('click');
+            };
+
+        }
+
+
+        var startEvtHandler = function(e){
+            var pos = getTouchPos(e);
+           /* ball.style.left = pos.x + 'px';
+            ball.style.top = pos.y + 'px';
+            ball.style.display = 'block';*/
+
+            var touches = e.touches;
+            if( !touches || touches.length == 1 ){ //touches为空，代表鼠标点击
+                point_start = getTouchPos(e);
+                time_start = Date.now();
+            }
+        }
+
+        var moveEvtHandler = function(e){
+            var pos = getTouchPos(e);
+           /* ball.style.left = pos.x + 'px';
+            ball.style.top = pos.y + 'px';*/
+
+
+            point_end = getTouchPos(e);
+            e.preventDefault();
+        }
+
+        //touchend的touches和targetTouches没有对象，只有changeTouches才有
+        var endEvtHandler = function(e){
+           /* ball.style.display = 'none';*/
+
+            var time_end = Date.now();
+
+            //距离和时间都符合
+            if(getDist(point_start,point_end) > SWIPE_DISTANCE && time_start- time_end < SWIPE_TIME){
+
+                var dir = getSwipeDirection(point_end,point_start);
+                console.log( 'swipe'+dir);
+            }
+        }
+
+
+        var SWIPE_DISTANCE = 30;  //移动30px之后才认为swipe事件
+        var SWIPE_TIME = 500;     //swipe最大经历时间
+        var point_start,
+                point_end,
+                time_start,
+                time_end;
+
+        //判断是PC或者移动设备
+        var startEvt, moveEvt, endEvt;
+        if("ontouchstart" in window){
+            startEvt="touchstart";
+            moveEvt="touchmove";
+            endEvt="touchend";
+        }else{
+            startEvt="mousedown";
+            moveEvt="mousemove";
+            endEvt="mouseup";
+        }
+
+        $('.card_cont').on(startEvt, startEvtHandler);
+        $('.card_cont').on(moveEvt, moveEvtHandler);
+        $('.card_cont').on(endEvt, endEvtHandler);
+
+    })
+
+</script>
+
+{% endblock %}
