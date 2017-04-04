@@ -34,20 +34,127 @@
 </body>
 <script>
 
-    var cb = $.Callbacks('memory');
 
-    cb.add( aaa );
-   
-    cb.add(bbb)
-    function aaa() {
-        console.log("aaa")
-    }
-    function bbb() {
-        console.log("bbb")
-    }
-   var callback = function () {
 
+   var Callbacks = function (options) {
+       var
+           memory,
+           fired,
+           firing,
+           firingStart,
+           firingLength,
+           firingIndex,
+           list = [],
+           stack = !options.once && [],
+           fire = function( data ) {
+               memory = options.memory;
+               fired = true;
+               firingIndex = firingStart || 0;
+               firingStart = 0;
+               firingLength = list.length;
+               firing = true;
+               for(;firingIndex < firingLength;firingIndex++){
+                   if( list[firingIndex].apply() == false && options.stopOnFalse){
+                       memory = false;
+                       break
+                   }
+
+               }
+               firing = false;
+               if(list){
+                   if(stack&&stack.length){
+                       fire(stack.shift())
+                   }
+               }
+           };
+        console.log('编译')
+       var self = {
+           add:function () {
+               if(list){
+                   var start = list.length;
+                   (function add(args) {
+                       $.each(args,function (_,arg) {
+                           var type = $.type(arg)
+                           if(type === 'function'){
+                               if(!options.unique || !self.has(arg)){
+                                   list.push(arg)
+                               }
+                           }else if(arg && arg.length && type !== 'string' ){
+                               add(arg);
+                           }
+                       })
+                   })(arguments);
+                   if(memory){
+                       firingStart = start;
+                       fire()
+                   }
+               }
+               return this
+           },
+           has:function (fn) {
+               return list.indexOf(fn) > -1;
+               return this
+           },
+           disable:function () {
+               list = stack = memory = undefined;
+               return this
+           },
+           fire:function () {
+               if(list(fired || stack)){
+                   return
+               }
+               if(firing && stack){
+                 stack.push(arguments)
+               }else {
+                   fire(arguments)
+               }
+               return this
+           }
+       };
+
+       return self;
+   };
+   var Deferr = function( func ) {
+       var tuples = [
+           // action, add listener, listener list, final state
+           [ "resolve", "done", Callbacks("once memory"), "resolved" ],
+           [ "reject", "fail", Callbacks("once memory"), "rejected" ],
+           [ "notify", "progress", Callbacks("memory") ]
+       ],
+           state = "pending",
+           promise = {
+               promise:function(obj){
+                   obj ? $.extend(obj,promise) : promise
+               }
+           };
+       deferred = {};
+       jQuery.each(tuples,function(i,tuple){
+           var list = tuple[2],
+                   stateString = tuple[3];
+           if ( stateString ) {
+               list.add(function(){
+                   state = stateString
+               },tuples[i^1][2].disable,tuples[2][2].lock)
+           }
+           deferred[tuple[1]] = list.add;
+           deferred[tuple[0]] = list.fire;
+       });
+      // promise.promise(deferred);
+       return deferred
+   };
+   function aaa() {
+       console.log('完成。。。')
    }
+   function bbb() {
+       console.log('失败。。。')
+   }
+   var cb = Deferr();
+   debugger
+   cb.done( aaa ).fail(bbb);
+    setTimeout(function () {
+        cb.resolve();
+        cb.reject()
+    },2000)
 
 </script>
 </html>
